@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Sherlock Web Interface</title>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h1 class="text-center">Sherlock Web Interface</h1>
+      <form action="/" method="post" class="form-group mt-5">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" class="form-control">
+        <input type="submit" value="Search" class="btn btn-primary mt-3">
+      </form>
+      {% if sherlock_output %}
+        <pre class="mt-5">{{ sherlock_output }}</pre>
+      {% endif %}
+    </div>
+  </body>
+</html>
